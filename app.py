@@ -2,6 +2,7 @@ from flask import Flask, request, render_template, jsonify
 import pytesseract
 from PIL import Image
 import re
+import os
 
 app = Flask(__name__)
 
@@ -59,5 +60,10 @@ def upload_file():
         'financial_data': financial_data
     })
 
-if __name__ == '__main__':
-    app.run()
+# Lambda handler function
+def handler(event, context):
+    from flask import Flask
+    from werkzeug.middleware.proxy_fix import ProxyFix
+
+    app.wsgi_app = ProxyFix(app.wsgi_app)
+    return app(event, context)

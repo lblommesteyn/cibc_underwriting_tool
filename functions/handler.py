@@ -2,14 +2,7 @@ from flask import Flask, request, render_template, jsonify
 import pytesseract
 from PIL import Image
 import re
-
-import logging
-logging.basicConfig(level=logging.DEBUG)
-
-@app.route('/')
-def index():
-    return render_template('index.html')
-
+import os
 
 app = Flask(__name__)
 
@@ -44,6 +37,9 @@ def calculate_loan_eligibility(financial_data):
     
     return loan_range
 
+@app.route('/')
+def index():
+    return render_template('index.html')
 
 @app.route('/walkthrough')
 def walkthrough():
@@ -64,5 +60,10 @@ def upload_file():
         'financial_data': financial_data
     })
 
-if __name__ == '__main__':
-    app.run()
+# Lambda handler function
+def handler(event, context):
+    from flask import Flask
+    from werkzeug.middleware.proxy_fix import ProxyFix
+
+    app.wsgi_app = ProxyFix(app.wsgi_app)
+    return app(event, context)

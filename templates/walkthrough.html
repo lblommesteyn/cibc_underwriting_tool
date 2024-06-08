@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works - Automated Underwriting Tool</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='wtstyle.css') }}">
+</head>
+<body>
+    <header>
+        <button onclick="window.location.href='/'">Back to Upload</button>
+    </header>
+    <h1>How It Works</h1>
+    <section>
+        <h2>Introduction</h2>
+        <p>Our AI-powered credit underwriting tool simplifies and accelerates the process of evaluating loan applications. By leveraging advanced machine learning algorithms and state-of-the-art OCR technology, we ensure accurate and efficient processing of financial documents.</p>
+    </section>
+    <section>
+        <h2>Step 1: Document Upload</h2>
+        <p>Users can upload various financial documents such as:</p>
+        <ul>
+            <li>Tax Returns</li>
+            <li>Pay Stubs</li>
+            <li>Bank Statements</li>
+        </ul>
+        <p>These documents are securely uploaded through our user-friendly interface.</p>
+    </section>
+    <section>
+        <h2>Step 2: Text Extraction</h2>
+        <p>Once uploaded, the documents are processed using Optical Character Recognition (OCR) technology provided by pytesseract. This technology converts the scanned documents into machine-readable text with high accuracy.</p>
+    </section>
+    <section>
+        <h2>Step 3: Data Extraction</h2>
+        <p>Our tool then extracts relevant financial data from the text using regular expressions and predefined templates. Key financial metrics such as annual income, debt levels, and credit scores are identified and parsed for further analysis.</p>
+    </section>
+    <section>
+        <h2>Step 4: AI-Driven Eligibility Calculation</h2>
+        <p>Leveraging machine learning algorithms, our tool evaluates the extracted data against a set of predefined business rules and eligibility criteria. The AI assigns a risk score and determines the loan eligibility range for each applicant.</p>
+    </section>
+    <section>
+        <h2>Step 5: Display Results</h2>
+        <p>The results, including the eligible loan range and detailed financial data, are displayed to the user in an easy-to-understand format. The entire process is designed to be completed within 7-9 days for loan amounts up to $500,000.</p>
+    </section>
+    <footer>&copy; 2024 Automated Underwriting Tool</footer>
+</body>
+</html>

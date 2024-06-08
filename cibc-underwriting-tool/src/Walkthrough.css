@@ -1,0 +1,68 @@
+/* Use the provided styles */
+.Walkthrough {
+    padding: 20px;
+    padding-top: 200px; /* Add more padding to the top */
+    max-width: 800px;
+    margin: 100x auto; /* Add margin to the top */
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .Walkthrough h1 {
+    font-size: 2.5em;
+    color: #BF1E2D;
+    text-align: center;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .Walkthrough p, .Walkthrough ol, .Walkthrough ul {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  .Walkthrough strong {
+    color: #BF1E2D;
+  }
+  
+  .Walkthrough h2 {
+    font-size: 2em;
+    color: #BF1E2D;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+  }
+  
+  .Walkthrough h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-top: 15px;
+  }
+  
+  .Walkthrough ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .return-home {
+    background-color: #BF1E2D;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.3s;
+    display: block;
+    margin: 20px auto 0;
+  }
+  
+  .return-home:hover {
+    background-color: #FFD100;
+    transform: translateY(-2px);
+  }
+  

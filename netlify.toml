@@ -1,6 +1,0 @@
-[build]
-  publish = "static"
-  command = "./build.sh"
-
-[functions]
-  directory = "functions"
